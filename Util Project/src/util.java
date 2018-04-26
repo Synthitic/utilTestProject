@@ -32,6 +32,8 @@ public class util {
 				eFindLoop();
 			} else if (option == 9) {
 				gambleGame();
+			} else if (option == 10) {
+				blackJack();
 			}
 		}
 	}
@@ -49,6 +51,7 @@ public class util {
 		System.out.println(
 				"8. Find e to a number of decimal places. (accurate up to n decimal places ± 3, accuracy beyond 1000 not measured) (Loop)");
 		System.out.println("9. Gamble against the computer in roulette!");
+		System.out.println("10. Play blackjack against the computer.");
 	}
 
 	private static void piFind() {
@@ -79,7 +82,7 @@ public class util {
 		while (choice == -1) {
 			choice = x.nextInt();
 			if (choice != 1 || choice != 2) {
-				// System.out.println("Invalid input please try again.");
+				System.out.println("Invalid input please try again.");
 			}
 		}
 		System.out.println("Lower bound of int?");
@@ -226,5 +229,18 @@ public class util {
 			}
 		}
 		gambleGame.playGame(t);
+	}
+
+	private static void blackJack() {
+		double t = -1;
+		System.out.println("Enter in starting amount of currency. (must be positive)");
+		while (t == -1) {
+			t = x.nextDouble();
+			if (t < 1) {
+				System.out.println("Invalid input please try again.");
+				t = -1;
+			}
+		}
+		blackJack.playGame(t);
 	}
 }

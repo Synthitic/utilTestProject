@@ -10,7 +10,7 @@ public class gambleGame {
 		int a = 0;
 		y = t;
 		y = game(y);
-		//System.out.println("Enter in -2 to stop playing. Any other integer to keep going.");
+		System.out.println("Enter in -2 to stop playing. Any other integer to keep going.");
 		//a = askInputInt("Enter in -2 to stop playing. Any other integer to keep going.");
 		a = x.nextInt();
 		while (a != -2) {
@@ -79,7 +79,6 @@ public class gambleGame {
 			System.out.println("You lose! You have lost " + w + " and have a balance of " + u);
 
 		}
-		System.out.println("Enter in -2 to stop playing. Any other integer to keep going.");
 		return u;
 	}
 
